@@ -9,6 +9,9 @@ import Cadastro from "./cadastro";
 import FormularioCadastroPet from "./pet/formularioCadastroPet";
 import FormularioCadastroProduto from "./produto/formularioCadastroProduto";
 import FormularioCadastroServico from "./servico/formularioCadastroServico";
+import Compra from "./compra";
+import CompraServico from "./servico/compraServico";
+import CompraProduto from "./produto/compraproduto";
 
 function Roteador() {
     const [tela, setTela] = useState('Clientes')
@@ -19,7 +22,7 @@ function Roteador() {
         setTela(novaTela)
     }
 
-    let barraNavegacao = <BarraNavegacao seletorView={selecionarView} tema="#e3f2fd" botoes={['Clientes', 'Pets', 'Produtos', 'Serviços', 'Cadastros', 'Compras' ]} />
+    let barraNavegacao = <BarraNavegacao seletorView={selecionarView} tema="#e3f2fd" botoes={['Clientes', 'Pets', 'Produtos', 'Serviços', 'Cadastros', 'Compras', 'Funções' ]} />
 
     if (tela === 'Clientes') {
         return (
@@ -77,14 +80,35 @@ function Roteador() {
                 <FormularioCadastroServico tema="#e3f2fd"></FormularioCadastroServico>
             </>
         ) 
-     } else {
+     } else if (tela === 'Cadastros') {
         return (
             <>
                 {barraNavegacao}
                 <Cadastro seletorView={selecionarView}/>
             </>
         )
-    }
+    } else if (tela === 'Compras') {
+        return (
+            <>
+                {barraNavegacao}
+                <Compra seletorView={selecionarView}/>
+            </>
+        )
+    } else if (tela === 'CompraServico') {
+        return (
+            <>
+                {barraNavegacao}
+                <CompraServico tema="#e3f2fd"/>
+            </>
+        )
+    } else if (tela === 'CompraProduto') {
+        return (
+            <>
+                {barraNavegacao}
+                <CompraProduto tema="#e3f2fd"/>
+            </>
+        )
+    } 
 }
 
 export default Roteador
