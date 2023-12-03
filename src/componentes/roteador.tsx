@@ -12,6 +12,12 @@ import FormularioCadastroServico from "./servico/formularioCadastroServico";
 import Compra from "./compra";
 import CompraServico from "./servico/compraServico";
 import CompraProduto from "./produto/compraproduto";
+import Funcoes from "./funcoes";
+import ConsumoCliente from "./funcoes/consumoCliente";
+import ConsumoProdServ from "./funcoes/consumoProdServ";
+import ConsumoTipoRaca from "./funcoes/consumoTipoRaca";
+import ConsumoQntd from "./funcoes/consumoQntd";
+import ConsumoValor from "./funcoes/consumoValor";
 
 function Roteador() {
     const [tela, setTela] = useState('Clientes')
@@ -108,7 +114,49 @@ function Roteador() {
                 <CompraProduto tema="#e3f2fd"/>
             </>
         )
-    } 
+    } else if (tela === 'Funções') {
+        return (
+            <>
+                {barraNavegacao}
+                <Funcoes seletorView={selecionarView}/>
+            </>
+        )
+    } else if (tela === 'ConsumoCliente') {
+        return (
+            <>
+                {barraNavegacao}
+                <ConsumoCliente tema="#e3f2fd"/>
+            </>
+        )
+    } else if (tela === 'ConsumoProdServ') {
+        return (
+            <>
+                {barraNavegacao}
+                <ConsumoProdServ tema="#e3f2fd"/>
+            </>
+        )
+    } else if (tela === 'ConsumoTipoRaca') {
+        return (
+            <>
+                {barraNavegacao}
+                <ConsumoTipoRaca tema="#e3f2fd"/>
+            </>
+        )
+    } else if (tela === 'ConsumoQntd') {
+        return (
+            <>
+                {barraNavegacao}
+                <ConsumoQntd tema="#e3f2fd"/>
+            </>
+        )
+    } else if (tela === 'ConsumoValor') {
+        return (
+            <>
+                {barraNavegacao}
+                <ConsumoValor tema="#e3f2fd"/>
+            </>
+        )
+    }
 }
 
 export default Roteador
