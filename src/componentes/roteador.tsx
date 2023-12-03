@@ -19,7 +19,7 @@ import ConsumoTipoRaca from "./funcoes/consumoTipoRaca";
 import ConsumoQntd from "./funcoes/consumoQntd";
 import ConsumoValor from "./funcoes/consumoValor";
 
-function Roteador() {
+function Roteador(): JSX.Element {
     const [tela, setTela] = useState('Clientes')
 
     function selecionarView(novaTela: string, evento: Event) {
@@ -28,135 +28,137 @@ function Roteador() {
         setTela(novaTela)
     }
 
-    let barraNavegacao = <BarraNavegacao seletorView={selecionarView} tema="#e3f2fd" botoes={['Clientes', 'Pets', 'Produtos', 'Serviços', 'Cadastros', 'Compras', 'Funções' ]} />
+    let barraNavegacao = <BarraNavegacao seletorView={selecionarView} tema="#e3f2fd" botoes={['Clientes', 'Pets', 'Produtos', 'Serviços', 'Cadastros', 'Compras', 'Funções']} />
 
-    if (tela === 'Clientes') {
-        return (
-            <>
-                {barraNavegacao}
-                <ListaCliente tema="#e3f2fd" />
-            </>
-        )
-    } else if (tela === 'Pets') {
-        return (
-            <>
-                {barraNavegacao}
-                <ListaPet tema="#e3f2fd"></ListaPet>
-            </>
-        )
-    } else if (tela === 'Produtos') {
-        return (
-            <>
-                {barraNavegacao}
-                <ListaProdutos tema="#e3f2fd"></ListaProdutos>
-            </>
-        )
-    }  else if (tela === 'Serviços') {
-        return (
-            <>
-                {barraNavegacao}
-                <ListaServicos tema="#e3f2fd"></ListaServicos>
-            </>
-        )      
-    }  else if (tela === 'CadastroCliente') {
-        return (
-            <>
-                {barraNavegacao}
-                <FormularioCadastroCliente tema="#e3f2fd"></FormularioCadastroCliente>
-            </>
-        ) 
-    }  else if (tela === 'CadastroPet') {
-        return (
-            <>
-                {barraNavegacao}
-                <FormularioCadastroPet tema="#e3f2fd"></FormularioCadastroPet>
-            </>
-        ) 
-    }  else if (tela === 'CadastroProduto') {
-        return (
-            <>
-                {barraNavegacao}
-                <FormularioCadastroProduto tema="#e3f2fd"></FormularioCadastroProduto>
-            </>
-        ) 
-    }  else if (tela === 'CadastroServiço') {
-        return (
-            <>
-                {barraNavegacao}
-                <FormularioCadastroServico tema="#e3f2fd"></FormularioCadastroServico>
-            </>
-        ) 
-     } else if (tela === 'Cadastros') {
-        return (
-            <>
-                {barraNavegacao}
-                <Cadastro seletorView={selecionarView}/>
-            </>
-        )
-    } else if (tela === 'Compras') {
-        return (
-            <>
-                {barraNavegacao}
-                <Compra seletorView={selecionarView}/>
-            </>
-        )
-    } else if (tela === 'CompraServico') {
-        return (
-            <>
-                {barraNavegacao}
-                <CompraServico tema="#e3f2fd"/>
-            </>
-        )
-    } else if (tela === 'CompraProduto') {
-        return (
-            <>
-                {barraNavegacao}
-                <CompraProduto tema="#e3f2fd"/>
-            </>
-        )
-    } else if (tela === 'Funções') {
-        return (
-            <>
-                {barraNavegacao}
-                <Funcoes seletorView={selecionarView}/>
-            </>
-        )
-    } else if (tela === 'ConsumoCliente') {
-        return (
-            <>
-                {barraNavegacao}
-                <ConsumoCliente tema="#e3f2fd"/>
-            </>
-        )
-    } else if (tela === 'ConsumoProdServ') {
-        return (
-            <>
-                {barraNavegacao}
-                <ConsumoProdServ tema="#e3f2fd"/>
-            </>
-        )
-    } else if (tela === 'ConsumoTipoRaca') {
-        return (
-            <>
-                {barraNavegacao}
-                <ConsumoTipoRaca tema="#e3f2fd"/>
-            </>
-        )
-    } else if (tela === 'ConsumoQntd') {
-        return (
-            <>
-                {barraNavegacao}
-                <ConsumoQntd tema="#e3f2fd"/>
-            </>
-        )
-    } else if (tela === 'ConsumoValor') {
-        return (
-            <>
-                {barraNavegacao}
-                <ConsumoValor tema="#e3f2fd"/>
-            </>
-        )
-    }
+    
+        if (tela === 'Clientes') {
+            return (
+                <>
+                    {barraNavegacao}
+                    <ListaCliente tema="#e3f2fd" />
+                </>
+            )
+        } else if (tela === 'Pets') {
+            return (
+                <>
+                    {barraNavegacao}
+                    <ListaPet tema="#e3f2fd" />
+                </>
+            )
+        } else if (tela === 'Produtos') {
+            return (
+                <>
+                    {barraNavegacao}
+                    <ListaProdutos tema="#e3f2fd" />
+                </>
+            )
+        } else if (tela === 'Serviços') {
+            return (
+                <>
+                    {barraNavegacao}
+                    <ListaServicos tema="#e3f2fd" />
+                </>
+            )
+        } else if (tela === 'CadastroCliente') {
+            return (
+                <>
+                    {barraNavegacao}
+                    <FormularioCadastroCliente tema="#e3f2fd" />
+                </>
+            )
+        } else if (tela === 'CadastroPet') {
+            return (
+                <>
+                    {barraNavegacao}
+                    <FormularioCadastroPet tema="#e3f2fd" />
+                </>
+            )
+        } else if (tela === 'CadastroProduto') {
+            return (
+                <>
+                    {barraNavegacao}
+                    <FormularioCadastroProduto tema="#e3f2fd" />
+                </>
+            )
+        } else if (tela === 'CadastroServiço') {
+            return (
+                <>
+                    {barraNavegacao}
+                    <FormularioCadastroServico tema="#e3f2fd" />
+                </>
+            )
+        } else if (tela === 'Cadastros') {
+            return (
+                <>
+                    {barraNavegacao}
+                    <Cadastro seletorView={selecionarView} />
+                </>
+            )
+        } else if (tela === 'Compras') {
+            return (
+                <>
+                    {barraNavegacao}
+                    <Compra seletorView={selecionarView} />
+                </>
+            )
+        } else if (tela === 'CompraServico') {
+            return (
+                <>
+                    {barraNavegacao}
+                    <CompraServico tema="#e3f2fd" />
+                </>
+            )
+        } else if (tela === 'CompraProduto') {
+            return (
+                <>
+                    {barraNavegacao}
+                    <CompraProduto tema="#e3f2fd" />
+                </>
+            )
+        } else if (tela === 'Funções') {
+            return (
+                <>
+                    {barraNavegacao}
+                    <Funcoes seletorView={selecionarView} />
+                </>
+            )
+        } else if (tela === 'ConsumoCliente') {
+            return (
+                <>
+                    {barraNavegacao}
+                    <ConsumoCliente tema="#e3f2fd" />
+                </>
+            )
+        } else if (tela === 'ConsumoProdServ') {
+            return (
+                <>
+                    {barraNavegacao}
+                    <ConsumoProdServ tema="#e3f2fd" />
+                </>
+            )
+        } else if (tela === 'ConsumoTipoRaca') {
+            return (
+                <>
+                    {barraNavegacao}
+                    <ConsumoTipoRaca tema="#e3f2fd" />
+                </>
+            )
+        } else if (tela === 'ConsumoQntd') {
+            return (
+                <>
+                    {barraNavegacao}
+                    <ConsumoQntd tema="#e3f2fd" />
+                </>
+            )
+        } else if (tela === 'ConsumoValor') {
+            return (
+                <>
+                    {barraNavegacao}
+                    <ConsumoValor tema="#e3f2fd" />
+                </>
+            )
+        }
+    return barraNavegacao
 }
 
-export default Roteador
+export default Roteador;

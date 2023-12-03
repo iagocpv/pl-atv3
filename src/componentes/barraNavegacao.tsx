@@ -2,6 +2,7 @@
 import { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
+import logo from '../PetLovers-icon.png';
 
 type props = {
     tema: string,
@@ -28,6 +29,7 @@ function BarraNavegacao(props: props) {
             <>
                 <nav className="navbar navbar-expand-lg" data-bs-theme="light" style={{ backgroundColor: tema, marginBottom: 10 }}>
                     <div className="container-fluid">
+                        <img src={logo} alt="logo" width="33" height="30" className="d-inline-block align-text-top" style={{ marginRight: 10 }}/>
                         <span className="navbar-brand mb-0 h1">PetLovers</span>
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>

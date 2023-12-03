@@ -74,6 +74,12 @@
   gap: 2em;
 }
 
+.opcoes-funcoes {
+  display: flex;
+  justify-content: space-around;
+  padding: 5%;
+}
+
 .opcoes-cadastro button {
   flex: 1 1 25em; 
   padding: 1em;
